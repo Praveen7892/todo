@@ -1,9 +1,256 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Welcome Page</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Queen 👑</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: #0b1c2d;
+    color: #f8f1e5;
+    scroll-behavior: smooth;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    width: 100%;
+    background: rgba(5, 15, 30, 0.95);
+    padding: 15px;
+    text-align: center;
+    z-index: 1000;
+    border-bottom: 2px solid #ffd700;
+}
+
+nav a {
+    color: #ffd700;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 120px 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+/* Headings */
+h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.8);
+    letter-spacing: 3px;
+}
+
+/* Paragraph */
+p {
+    font-size: 22px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    background: url("images/image_6.jpeg")  center/contain no-repeat;
+    animation: zoomBg 20s ease-in-out infinite alternate;
+    display: flex;
+    object-fit: contain;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Light cinematic overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.6)
+    );
+}
+
+/* Keep text above overlay */
+.hero h1,
+.hero p {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes zoomBg {
+    from { background-size: 100%; }
+    to { background-size: 110%; }
+}
+
+/* Alternate Section Background */
+#message {
+    background: linear-gradient(to right, #101f33, #162c46);
+}
+/* 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    padding: 0 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border: 3px solid #ffd700;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.9);
+} */
+
+
+/* Clean Modern Gallery */
+
+#gallery {
+    background: #0e1a2b;
+    padding: 100px 40px;
+}
+
+.gallery-title {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Soft hover effect */
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+#forever {
+    background: linear-gradient(to right, #0f1a2b, #1c2d44);
+}
+
+.heart {
+    font-size: 45px;
+    color: #ffd700;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffd700; }
+    to { text-shadow: 0 0 30px #ffcc00; }
+}
+
+/* Footer */
+footer {
+    padding: 30px;
+    background: #050d18;
+    color: #ffd700;
+    text-align: center;
+    border-top: 2px solid #ffd700;
+}
+</style>
 </head>
+
 <body>
-    <h1>I Love You</h1>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#message">My Love</a>
+    <a href="#gallery">Her Gallery</a>
+    <a href="#forever">Forever</a>
+</nav>
+
+<section id="home" class="hero">
+    <h1>My Queen 👑</h1>
+    <p>You are the most precious treasure in my life.</p>
+</section>
+
+<section id="message">
+    <h1>To The Love of My Life ❤️</h1>
+    <p>
+        From the moment you entered my world, everything changed.
+        You are my happiness, my strength, and my peace.
+        Every day with you feels like a blessing.
+        I promise to love you, respect you, and cherish you forever.
+    </p>
+</section>
+
+<!-- <section id="gallery">
+    <h1>Her Royal Gallery 🖼️</h1>
+    <div class="gallery">
+        <img src="WhatsApp Image 2026-02-28 at 5.18.20 PM.jpeg" alt="Her Photo 1">
+        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM (3).jpeg" alt="Her Photo 2">
+        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM (2).jpeg" alt="Her Photo 3">
+        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM.jpeg" alt="Her Photo 4">
+    </div>
+</section> -->
+
+<section id="gallery">
+    <h1 class="gallery-title">Her Royal Gallery</h1>
+    <div class="gallery">
+        <img src="images/image_1.jpeg" alt="">
+        <img src="images/image_9.jpeg" alt="">
+        <img src="images/image_3.jpeg" alt="">
+        <img src="images/image_6.jpeg" alt="">
+        <img src="images/image_2.jpeg" alt="">
+        <img src="images/image_8.jpeg" alt="">
+
+    </div>
+</section>
+
+<section id="forever">
+    <h1>Forever & Always 💍</h1>
+    <p>
+        No matter where life takes us,
+        my heart will always belong to you.
+        You are my today, my tomorrow, and my forever.
+    </p>
+    <div class="heart">❤️</div>
+</section>
+
+<footer>
+    Made with Endless Love 👑❤️
+</footer>
+
 </body>
 </html>
