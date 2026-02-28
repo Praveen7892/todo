@@ -131,7 +131,7 @@ p {
 
 #gallery {
     background: #0e1a2b;
-    padding: 100px 40px;
+    /* padding: 100px 40px; */
 }
 
 .gallery-title {
@@ -188,6 +188,44 @@ footer {
     text-align: center;
     border-top: 2px solid #ffd700;
 }
+
+/* Responsive Design */
+
+/* Tablets (1024px and below) */
+@media (max-width: 1024px) {
+    h1 { font-size: 45px; }
+    p { font-size: 18px; }
+    nav a { font-size: 16px; margin: 0 15px; }
+    /* .gallery img { height: 300px; } */
+}
+
+/* Mobile Large (768px and below) */
+@media (max-width: 768px) {
+    nav a { font-size: 15px; margin: 0 12px; }
+    h1 { font-size: 38px; }
+    p { font-size: 16px; }
+    section { padding: 100px 15px; }
+    /* .gallery img { height: 250px; } */
+    .gallery-title { font-size: 36px; margin-bottom: 40px; }
+}
+
+/* Mobile Small (480px and below) */
+@media (max-width: 480px) {
+    h1 { font-size: 30px; }
+    p { font-size: 14px; }
+    section { padding: 80px 10px; }
+    nav a { font-size: 14px; margin: 0 8px; }
+    /* .gallery img { height: 180px; }  */
+    .gallery-title { font-size: 28px; margin-bottom: 30px; }
+    
+    /* Hero adjustments */
+    .hero {
+        background-size: contain;           /* Fit image inside viewport */
+        background-position: top center;    /* Focus on top of image */
+        height: 80vh;                       /* Reduce hero height */
+    }
+}
+
 </style>
 </head>
 
@@ -214,16 +252,6 @@ footer {
         I promise to love you, respect you, and cherish you forever.
     </p>
 </section>
-
-<!-- <section id="gallery">
-    <h1>Her Royal Gallery 🖼️</h1>
-    <div class="gallery">
-        <img src="WhatsApp Image 2026-02-28 at 5.18.20 PM.jpeg" alt="Her Photo 1">
-        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM (3).jpeg" alt="Her Photo 2">
-        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM (2).jpeg" alt="Her Photo 3">
-        <img src="WhatsApp Image 2026-02-28 at 5.18.21 PM.jpeg" alt="Her Photo 4">
-    </div>
-</section> -->
 
 <section id="gallery">
     <h1 class="gallery-title">Her Royal Gallery</h1>
